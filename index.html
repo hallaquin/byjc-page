@@ -4,140 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>By JC Mobile Detailing | Orlando, FL</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    <style>
-        body { font-family: 'Work Sans', sans-serif; }
-        
-        /* Efecto de desenfoque para el menú */
-        .glass {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        /* Contenedor de videos para evitar el frame negro */
-        .video-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 0;
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(17,24,39,0.4) 50%, rgba(17,24,39,1) 100%);
-            z-index: 10;
-        }
-
-        /* Animación de brillo para el logo */
-        @keyframes shine-logo {
-            0% { transform: translateX(-150%) skew-x(-12deg); }
-            30% { transform: translateX(150%) skew-x(-12deg); }
-            100% { transform: translateX(150%) skew-x(-12deg); }
-        }
-        .animate-shine-logo div {
-            animation: shine-logo 6s infinite;
-        }
-    </style>
 </head>
-<body class="bg-gray-900 text-white overflow-x-hidden">
+<body class="site-body">
 
-    <div class="sticky top-0 z-[60] bg-purple-700 text-white text-xs md:text-sm py-2 px-6 flex justify-between items-center border-b border-purple-800">
-        <div class="flex items-center space-x-4">
-            <div class="flex items-center">
-                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                <a href="https://maps.google.com/?q=Orlando,FL" target="_blank" class="font-medium hover:underline text-white">Orlando, FL</a>
+    <div class="top-bar">
+        <div class="top-bar-contact">
+            <div class="contact-item">
+                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                <a href="https://maps.google.com/?q=Orlando,FL" target="_blank" class="link-white">Orlando, FL</a>
             </div>
-            <div class="flex items-center">
-                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                <a href="tel:+13215137453" class="font-medium hover:text-purple-200 transition">(321) 513-7453</a>
+            <div class="contact-item">
+                <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                <a href="tel:+13215137453" class="link-white transition-purple">(321) 513-7453</a>
             </div>
         </div>
-        <div class="hidden sm:block font-bold uppercase tracking-tighter opacity-80">Monday - Saturday: 8am - 6pm</div>
+        <div class="top-bar-hours">Monday - Saturday: 8am - 6pm</div>
     </div>
 
-    <nav class="sticky top-[36px] w-full z-50 p-5 flex justify-between items-center glass">
-        <a href="#" class="flex items-center">
-            <img src="assets/logo.png" alt="By JC Logo" class="h-12 w-auto hover:scale-105 transition-transform">
+    <nav class="main-nav glass">
+        <a href="#" class="nav-logo">
+            <img src="assets/logo.png" alt="By JC Logo" class="logo-img">
         </a>
-        <div class="space-x-8 hidden md:block">
-            <a href="#servicios" class="hover:text-purple-400 transition font-medium">Services</a>
-            <a href="https://wa.me/13215137453" class="bg-purple-600 px-6 py-2 rounded-lg font-bold hover:bg-purple-700 transition">Schedule Now</a>
+        <div class="nav-links">
+            <a href="#servicios" class="nav-link">Services</a>
+            <a href="https://wa.me/13215137453" class="btn-primary">Schedule Now</a>
         </div>
     </nav>
 
-    <section class="relative h-screen flex items-start justify-center pt-24 md:pt-32 overflow-hidden">
+    <section class="hero">
         <div class="video-container">
-            <video id="videoA" autoplay muted playsinline class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100"></video>
-            <video id="videoB" muted playsinline class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0"></video>
+            <video id="videoA" autoplay muted playsinline class="video active"></video>
+            <video id="videoB" muted playsinline class="video hidden-video"></video>
             <div class="overlay"></div>
         </div>
 
-        <div class="relative z-20 text-center px-4" data-aos="fade-up" data-aos-duration="1500">
-            <span class="text-purple-300 font-bold tracking-widest uppercase mb-2 block text-2xl md:text-5xl">QUALITY AND DISCIPLINE</span>
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
+            <span class="hero-subtitle">QUALITY AND DISCIPLINE</span>
             
-            <div class="relative inline-block my-6" data-aos="zoom-in" data-aos-duration="2000">
-                <img src="assets/logo.png" alt="By JC Logo" class="h-40 md:h-80 w-auto mx-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.9)]">
-                <div class="absolute inset-0 w-full h-full animate-shine-logo overflow-hidden pointer-events-none">
-                    <div class="w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -skew-x-12 transform -translate-x-full"></div>
+            <div class="logo-animation-container" data-aos="zoom-in" data-aos-duration="2000">
+                <img src="assets/logo.png" alt="By JC Logo" class="hero-logo-img">
+                <div class="shine-effect">
+                    <div class="shine-bar"></div>
                 </div>
             </div>
 
-            <p class="text-lg md:text-xl mb-10 text-gray-300 max-w-2xl mx-auto italic font-light">
+            <p class="hero-description">
                 Professional showroom results at your doorstep. We bring the shine to your garage.
             </p>
 
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#servicios" class="bg-purple-600 px-10 py-4 rounded-md text-lg font-bold hover:bg-purple-700 transition shadow-lg shadow-purple-900/20">OUR SERVICES</a>
-                <a href="https://www.instagram.com/byjc.mobiledetailing/" target="_blank" class="bg-purple-600 px-10 py-4 rounded-md text-lg font-bold hover:bg-purple-700 transition shadow-lg shadow-purple-900/20">OUR INSTAGRAM</a>
-                <a href="https://wa.me/13215137453" class="border-2 border-white px-10 py-4 rounded-md text-lg font-bold hover:bg-white hover:text-black transition uppercase">Get a Quote</a>
+            <div class="hero-actions">
+                <a href="#servicios" class="btn-primary btn-large shadow-purple">OUR SERVICES</a>
+                <a href="https://www.instagram.com/byjc.mobiledetailing/" target="_blank" class="btn-primary btn-large shadow-purple">OUR INSTAGRAM</a>
+                <a href="https://wa.me/13215137453" class="btn-outline btn-large">Get a Quote</a>
             </div>
         </div>
     </section>
 
-    <section id="servicios" class="relative z-30 py-24 px-6 bg-gray-900">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
-            <div class="p-8 rounded-3xl bg-gray-800 border border-gray-700 hover:border-purple-500 transition group" data-aos="fade-up">
-                <svg class="w-12 h-12 text-purple-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
-                <h4 class="text-2xl font-bold mb-3 uppercase italic">Interior Detail</h4>
-                <p class="text-gray-400 leading-relaxed">Deep vacuuming, steam cleaning, and leather conditioning for a factory feel.</p>
+    <section id="servicios" class="services-section">
+        <div class="services-grid">
+            <div class="service-card" data-aos="fade-up">
+                <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                <h4 class="service-title">Interior Detail</h4>
+                <p class="service-text">Deep vacuuming, steam cleaning, and leather conditioning for a factory feel.</p>
             </div>
 
-            <div class="p-8 rounded-3xl bg-gray-800 border border-gray-700 hover:border-purple-500 transition group" data-aos="fade-up" data-aos-delay="200">
-                <svg class="w-12 h-12 text-purple-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                <h4 class="text-2xl font-bold mb-3 uppercase italic">Paint Correction</h4>
-                <p class="text-gray-400 leading-relaxed">Removing swirls and scratches to restore that deep, mirror-like reflection.</p>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                <h4 class="service-title">Paint Correction</h4>
+                <p class="service-text">Removing swirls and scratches to restore that deep, mirror-like reflection.</p>
             </div>
 
-            <div class="p-8 rounded-3xl bg-gray-800 border border-gray-700 hover:border-purple-500 transition group" data-aos="fade-up" data-aos-delay="400">
-                <svg class="w-12 h-12 text-purple-500 mb-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                <h4 class="text-2xl font-bold mb-3 uppercase italic">Ceramic Coating</h4>
-                <p class="text-gray-400 leading-relaxed">High-end hydrophobic protection against Florida's UV rays and road grime.</p>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <svg class="service-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                <h4 class="service-title">Ceramic Coating</h4>
+                <p class="service-text">High-end hydrophobic protection against Florida's UV rays and road grime.</p>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-gray-800 text-center text-gray-500 bg-gray-900">
-        <p class="uppercase tracking-widest text-xs">&copy; 2026 By JC Mobile Detailing Orlando, FL. Quality & Discipline.</p>
+    <footer class="main-footer">
+        <p>© 2026 By JC Mobile Detailing Orlando, FL. Quality & Discipline.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: true });
 
-        // MOTOR DE VIDEOS SEAMLESS (Sin frame negro)
         const playlist = [
             "assets/1.mp4", "assets/2.mp4", "assets/3.mp4",
             "assets/4.mp4", "assets/5.mp4", "assets/6.mp4",
@@ -159,14 +116,12 @@
 
             idleVideo.oncanplaythrough = () => {
                 idleVideo.play();
-                idleVideo.classList.replace('opacity-0', 'opacity-100');
-                activeVideo.classList.replace('opacity-100', 'opacity-0');
+                idleVideo.style.opacity = '1';
+                activeVideo.style.opacity = '0';
 
-                // Intercambio de roles
                 [activeVideo, idleVideo] = [idleVideo, activeVideo];
                 activeVideo.onended = swapVideos;
                 
-                // Limpiar el video que quedó oculto después de la transición
                 setTimeout(() => {
                     idleVideo.pause();
                     idleVideo.oncanplaythrough = null;
