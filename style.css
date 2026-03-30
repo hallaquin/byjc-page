@@ -224,6 +224,11 @@ body {
     font-weight: 300;
 }
 
+.hero-description-emblem {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
 .hero-actions {
     display: flex;
     flex-direction: column;
